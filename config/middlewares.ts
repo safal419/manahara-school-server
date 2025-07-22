@@ -24,7 +24,11 @@ const middlewares = [
   {
     name: 'strapi::cors',
     config: {
-      origin: process.env.CORS_ORIGIN,
+     origin: [
+        'https://manaharaschool.edu.np',
+        'https://www.manaharaschool.edu.np',
+        
+      ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true,
