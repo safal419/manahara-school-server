@@ -27,6 +27,7 @@ const middlewares = [
      origin: [
         'https://manaharaschool.edu.np',
         'https://www.manaharaschool.edu.np',
+        'http://localhost:3000',
         
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
