@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "school_events",
+  "info": {
+    "singularName": "school-event",
+    "pluralName": "school-events",
+    "displayName": "School-event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Workshop",
+        "Trip",
+        "Meeting",
+        "Health",
+        "Cultural",
+        "Sports"
+      ]
+    }
+  }
+}
