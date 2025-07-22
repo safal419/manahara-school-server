@@ -566,6 +566,36 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPopupModalPopupModal extends Struct.SingleTypeSchema {
+  collectionName: 'popup_modals';
+  info: {
+    displayName: 'Popup Modal';
+    pluralName: 'popup-modals';
+    singularName: 'popup-modal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::popup-modal.popup-modal'
+    > &
+      Schema.Attribute.Private;
+    promotionImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSchoolEventSchoolEvent extends Struct.CollectionTypeSchema {
   collectionName: 'school_events';
   info: {
@@ -1114,6 +1144,7 @@ declare module '@strapi/strapi' {
       'api::highlight.highlight': ApiHighlightHighlight;
       'api::home.home': ApiHomeHome;
       'api::new.new': ApiNewNew;
+      'api::popup-modal.popup-modal': ApiPopupModalPopupModal;
       'api::school-event.school-event': ApiSchoolEventSchoolEvent;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

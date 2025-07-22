@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "popup_modals",
+  "info": {
+    "singularName": "popup-modal",
+    "pluralName": "popup-modals",
+    "displayName": "Popup Modal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "promotionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
